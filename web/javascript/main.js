@@ -1,5 +1,10 @@
 var pkmName;
+let counter = 0;
 window.onload = function() {
+    newPkm();
+}
+
+function newPkm(){
     fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
         .then(response => response.json())
         .then(data => {
@@ -10,12 +15,11 @@ window.onload = function() {
                 .then(pokemonData => {
                     startGame(randomPokemonName, pokemonData.types.map(typeInfo => typeInfo.type.name), pokemonData.id, pokemonData.height, pokemonData.weight, pokemonData.sprites.front_default);
                     pkmName=randomPokemonName;
-                });
+                })
+                .catch(error => console.error('Error:', error));
         });
-    var lastPokemon = localStorage.getItem('lastPokemon');  // Retrieve the last guessed Pokémon name
-    if (lastPokemon) {
-        document.getElementById('lastPokemon').textContent = 'Last Pokémon: ' + lastPokemon;  // Display the last guessed Pokémon
-    }
+   
+    
     function startGame(pokemonName, pokemonTypes, pokemonId , pokemonHeight, pokemonWeight, pokemonPhoto) {
         console.log(pokemonName);
         document.getElementById('pokemonToGuess').innerHTML = 
@@ -26,15 +30,21 @@ window.onload = function() {
             '<br><img src="'+pokemonPhoto+'">';
     }
 }
-
-
+function UpdateScore(score){
+    document.getElementById('streak').textContent = 'Streak: ' + score;
+}
 document.getElementById('form').addEventListener('submit', function(event){
     event.preventDefault();
-    var userInput = document.getElementById('pkmName').value; 
+    var userInput = document.getElementById('userInput').value; 
     if(userInput.toLowerCase()==pkmName){
         console.log('Trobat');
-        localStorage.setItem('lastPokemon', pkmName);  // Store the last guessed Pokémon name
+        counter++;
+        UpdateScore(counter);
+        newPkm();
+    }
+    else{
+        alert("Wrong Pokémon, it was "+pkmName)
         location.reload();
     }
-    document.getElementById('pkmName').value = '';
+    document.getElementById('userInput').value = '';
 });
