@@ -1,0 +1,73 @@
+
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+body{
+    font-family: Arial, sans-serif;
+    margin: 15px;
+    padding: 15px;
+    height: 100vh;
+    width: auto;
+    text-align: center;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/eb6d7e02-84f3-4e3a-a5b5-7c1489afc0f2/d7hjsj7-6f135f19-37f9-418b-8062-f3a6498858b1.png/v1/fill/w_718,h_404,q_80,strp/pokemon__ash_capture_pokemon__wallpaper__by_kill3rcombo_d7hjsj7-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDA0IiwicGF0aCI6IlwvZlwvZWI2ZDdlMDItODRmMy00ZTNhLWE1YjUtN2MxNDg5YWZjMGYyXC9kN2hqc2o3LTZmMTM1ZjE5LTM3ZjktNDE4Yi04MDYyLWYzYTY0OTg4NThiMS5wbmciLCJ3aWR0aCI6Ijw9NzE4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.lqkd3me3AY1ys2elwscvfNH_g-efMGfW3EKY4WrEupw');
+    background-size: cover;
+    overflow: hidden;
+}
+h1 {
+    color: #131313;
+    font-family: Arial, sans-serif;
+    font-size: 2.5em; /* 40px */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px
+}
+
+h2 {
+    color: #131313;
+    font-family: Arial, sans-serif;
+    font-size: 2em; /* 32px */
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 15px;
+}
+p{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+}
+div {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+    border-radius: 50px;
+    padding-bottom: 10px
+}
+button {
+    background-color: rgba(65, 194, 14, 0.815);
+    margin: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bck {
+    background-color: rgba(65, 194, 14, 0.459);
+}
+#pokemonToGuess{
+    color: black;
+    background: #52525286;
+    text-align: center;
+    padding: auto;
+    border-radius: 20px;
+    padding: 20px;
+    width: 75%; 
+    font-size: 30px;
+}
+#form{
+    margin: 20px;
+}
